@@ -117,7 +117,7 @@ function llamarServicio() {
   dataArray = [exhibido,fabrica,envio,ganancia];
   jQuery.ajax({
     type: "POST",
-    url: "http://localhost:8080/costo",
+    url: "http://34.192.16.38:8888/costo",
     data: JSON.stringify(dataArray),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
