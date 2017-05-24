@@ -43,7 +43,7 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-    text-align:center; 
+    text-align:center;
     vertical-align:middle;
 }
 
@@ -90,7 +90,6 @@ tr:nth-child(even) {
     <div class="row">
       <div class="col-sm-6">
         <h3> Costos por trío de acolchadas</h3>
-        <form>
         <table class="table table-striped">
           <tr>
             <th>Costo exhibido por prenda</th>
@@ -106,22 +105,18 @@ tr:nth-child(even) {
           </tr>
         </table>
       </div>
-    </form>
           <div class="col-sm-2"></div>
 
       <div class="col-sm-4">
         <h3>Costo total: </h3>
-        <form>
           <div class="form-group">
             <label for="costototal">Utilidad total quincenal:</label>
             <label type="number" id="costototal">1.167.572,44</label>
           </div>
           <div class="form-group">
-            <input type="radio" name="alternativa" value="a1" checked> Alternativa 1<br>
-            <input type="radio" name="alternativa" value="a2"> Alternativa 2<br>
+            <input type="radio" name="alternativa" value="a1" checked onclick="alternativa1();"> Alternativa 1<br>
+            <input type="radio" name="alternativa" value="a2" onclick="alternativa2()"> Alternativa 2<br>
           </div>
-          <button type="submit" class="btn btn-default" onclick="myFunction()">Aplicar</button>
-        </form>
       </div>
     </div>
 
@@ -204,7 +199,7 @@ tr:nth-child(even) {
     <td id="p9">0</td>
     <td id="s9">0</td>
   </tr>
- 
+
 </table>
 </div>
 <br>
@@ -221,12 +216,6 @@ tr:nth-child(even) {
     <canvas id="g5"></canvas>
      </div>
  </div>
-
- <script>
-function myFunction() {
-    document.getElementById("p9").innerHTML = "Hello World";
-}
-</script>
 
 
 

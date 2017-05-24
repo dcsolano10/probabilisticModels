@@ -43,3 +43,50 @@ var myG5 = new Chart(g5, {
   }
 });
 
+function alternativa1()
+{
+  document.getElementById('p1').innerHTML = '3';
+  document.getElementById('p2').innerHTML = '3';
+  document.getElementById('p3').innerHTML = '3';
+  document.getElementById('p4').innerHTML = '0';
+  document.getElementById('p5').innerHTML = '0';
+  document.getElementById('p6').innerHTML = '0';
+  document.getElementById('p7').innerHTML = '0';
+  document.getElementById('p8').innerHTML = '0';
+  document.getElementById('p9').innerHTML = '0';
+
+  document.getElementById('s1').innerHTML = '6';
+  document.getElementById('s2').innerHTML = '0';
+  document.getElementById('s3').innerHTML = '0';
+  document.getElementById('s4').innerHTML = '3';
+  document.getElementById('s5').innerHTML = '0';
+  document.getElementById('s6').innerHTML = '0';
+  document.getElementById('s7').innerHTML = '3';
+  document.getElementById('s8').innerHTML = '3';
+  document.getElementById('s9').innerHTML = '0';
+  document.getElementById('costototal').innerHTML = '1.167.572,44';
+}
+
+function alternativa2()
+{
+  document.getElementById('p1').innerHTML = '3';
+  document.getElementById('p2').innerHTML = '6';
+  document.getElementById('p3').innerHTML = '6';
+  document.getElementById('p4').innerHTML = '3';
+  document.getElementById('p5').innerHTML = '3';
+  document.getElementById('p6').innerHTML = '3';
+  document.getElementById('p7').innerHTML = '0';
+  document.getElementById('p8').innerHTML = '0';
+  document.getElementById('p9').innerHTML = '0';
+
+  document.getElementById('s1').innerHTML = '6';
+  document.getElementById('s2').innerHTML = '0';
+  document.getElementById('s3').innerHTML = '0';
+  document.getElementById('s4').innerHTML = '6';
+  document.getElementById('s5').innerHTML = '3';
+  document.getElementById('s6').innerHTML = '0';
+  document.getElementById('s7').innerHTML = '6';
+  document.getElementById('s8').innerHTML = '3';
+  document.getElementById('s9').innerHTML = '0';
+  document.getElementById('costototal').innerHTML = '1.746.788,87';
+}
