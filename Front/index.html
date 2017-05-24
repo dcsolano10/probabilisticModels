@@ -76,19 +76,19 @@
         <table class="table table-striped">
           <tr>
             <th>Costo exhibido</th>
-            <td><input type="number" class="form-control" id="exhibido"></td>
+            <td><input type="number" class="form-control" placeholder="65000" id="exhibido"></td>
           </tr>
           <tr>
             <th>Costo envío desde fábrica</th>
-            <td><input type="number" class="form-control" id="fabrica"></td>
+            <td><input type="number" class="form-control" placeholder="11257" id="fabrica"></td>
           </tr>
           <tr>
             <th>Costo envío entre tiendas</th>
-            <td><input type="number" class="form-control" id="envio"></td>
+            <td><input type="number" class="form-control" placeholder="10000" id="envio"></td>
           </tr>
           <tr>
             <th>Ganancia</th>
-            <td><input type="number" class="form-control" id="fabrica"></td>
+            <td><input type="number" class="form-control" placeholder="150000" id="fabrica"></td>
           </tr>
         </table>
       </div>
@@ -98,8 +98,8 @@
         <h3>Costo total: </h3>
         <form>
           <div class="form-group">
-            <label for="costototal">Costo total:</label>
-            <input type="number" class="form-control" id="costototal">
+            <label for="costototal">Ganancias totales actuales:</label>
+            <input type="number" class="form-control" placeholder="3104321.62" id="costototal">
           </div>
           <div class="form-group">
             <input type="radio" name="alternativa" value="a1" checked> Alternativa 1<br>
@@ -115,25 +115,31 @@
 
     <div class="row">
       <div class="col-sm-6">
+      <center><b>Tasa de envío de acolchadas desde la fábrica por quincena<br /> </b></center>
         <canvas id="g1"></canvas>
       </div>
       <div class="col-sm-6">
+            <center><b>Tasa de traslado de acolchadas entre tiendas por quincena<br /> </b></center>
        <canvas id="g2"></canvas>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-6">
+            <center><b>Tasa de ventas de acolchadas por quincena<br /> </b></center>
         <canvas id="g3"></canvas>
       </div>
       <div class="col-sm-6">
+            <center><b>Costos totales actuales<br /> </b></center>
        <canvas id="g4"></canvas>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-6">
+            <center><b>Análisis de sensibilidad - Ganancia total contra tasa de ventas<br /> </b></center>
         <canvas id="g5"></canvas>
       </div>
       <div class="col-sm-6">
+            <center><b>Tasa efectiva de ventas por quincena<br /> </b></center>
        <canvas id="g6"></canvas>
       </div>
     </div>

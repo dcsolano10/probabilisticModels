@@ -119,6 +119,7 @@ public class Logica {
 		costosActuales.add(3, 150000.0);
 
 		costosTotales = new ArrayList<Double>();
+		System.out.println(darCostoTotal());
 
 
 	}
@@ -154,8 +155,12 @@ public class Logica {
 		double ventas=piGanaciaSP*deltaSP+piGanaciaMP*deltaMP+piGanaciaLP*deltaLP+piGanaciaSS*deltaSS+piGanaciaMS*deltaMS+piGanaciaLS*deltaLS;
 		double gananciasTotales=costosActuales.get(3)* ventas;
 		costosTotales.add(3, gananciasTotales);
+		System.out.println(gananciasTotales);
+		System.out.println(costoEnvioTiendas);
+		System.out.println(costoEnvioInv);
+		System.out.println(costoExhibidas);
 
-		costoTotal=gananciasTotales+costoEnvioTiendas+costoEnvioInv+costoExhibidas;
+		costoTotal=gananciasTotales-costoEnvioTiendas-costoEnvioInv-costoExhibidas;
 
 		return costoTotal;
 
@@ -165,5 +170,8 @@ public class Logica {
 	public ArrayList<Double> darCostosTotales()
 	{
 		return costosTotales;
+	}
+	public static void main(String[] args) {
+		new Logica();
 	}
 }

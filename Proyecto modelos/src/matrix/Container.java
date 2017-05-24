@@ -52,44 +52,44 @@ public class Container {
 		{
 			Pack siguiente= new Pack(MAXIMO, pack.getB(), pack.getC(), pack.getD(), pack.getE(), pack.getF());
 			array.add(siguiente);
-			values.add(2.89);
-			diagonal+=2.89;
+			values.add(1.0);
+			diagonal+=1.0;
 		}
 		if(pack.getB()<MAXIMO)
 		{
 			Pack siguiente= new Pack(pack.getA(), MAXIMO, pack.getC(), pack.getD(), pack.getE(), pack.getF());
 			array.add(siguiente);
-			values.add(7.11);
-			diagonal+=7.11;
+			values.add(1.0);
+			diagonal+=1.0;
 		}
 		if(pack.getC()<MAXIMO)
 		{
 			Pack siguiente= new Pack(pack.getA(), pack.getB(), MAXIMO, pack.getD(), pack.getE(), pack.getF());
 			array.add(siguiente);
-			values.add(4.89);
-			diagonal+=4.89;
+			values.add(1.0);
+			diagonal+=1.0;
 		}
 		if(pack.getD()<MAXIMO)
 		{
 
 			Pack siguiente= new Pack(pack.getA(), pack.getB(), pack.getC(), MAXIMO, pack.getE(), pack.getF());
 			array.add(siguiente);
-			values.add(1.94);
-			diagonal+=1.94;
+			values.add(1.0);
+			diagonal+=1.0;
 		}
 		if(pack.getE()<MAXIMO)
 		{
 			Pack siguiente= new Pack(pack.getA(), pack.getB(), pack.getC(), pack.getD(), MAXIMO, pack.getF());
 			array.add(siguiente);
-			values.add(5.94);
-			diagonal+=5.94;
+			values.add(1.0);
+			diagonal+=1.0;
 		}
 		if(pack.getF()<MAXIMO)
 		{
 			Pack siguiente= new Pack(pack.getA(), pack.getB(), pack.getC(), pack.getD(), pack.getE(), MAXIMO);
 			array.add(siguiente);
-			values.add(4.94);
-			diagonal+=4.94;
+			values.add(1.0);
+			diagonal+=1.0;
 		}
 		if(pack.getA()>0)
 		{
