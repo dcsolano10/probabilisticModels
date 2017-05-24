@@ -42,3 +42,4 @@ var myG5 = new Chart(g5, {
     }]
   }
 });
+
