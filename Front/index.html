@@ -76,33 +76,32 @@
         <table class="table table-striped">
           <tr>
             <th>Costo exhibido</th>
-            <td><input type="number" class="form-control" placeholder="65000" id="exhibido"></td>
+            <td><input type="number" class="form-control" placeholder="Costo exhibido" id="exhibido"></td>
           </tr>
           <tr>
             <th>Costo envío desde fábrica</th>
-            <td><input type="number" class="form-control" placeholder="11257" id="fabrica"></td>
+            <td><input type="number" class="form-control" placeholder="Costo envío desde fábrica" id="fabrica"></td>
           </tr>
           <tr>
             <th>Costo envío entre tiendas</th>
-            <td><input type="number" class="form-control" placeholder="10000" id="envio"></td>
+            <td><input type="number" class="form-control" placeholder="Costo envío entre tiendas" id="envio"></td>
           </tr>
           <tr>
             <th>Ganancia</th>
-            <td><input type="number" class="form-control" placeholder="150000" id="fabrica"></td>
+            <td><input type="number" class="form-control" placeholder="Ganancia" id="ganancia"></td>
           </tr>
         </table>
       </div>
 
       <div class="col-sm-4">
-        <h3>Costo total: </h3>
+        <h3>Ganancia total: </h3>
           <div class="form-group">
-            <label for="costototal">Ganancias totales actuales:</label>
-            <input type="number" class="form-control" placeholder="3104321.62" id="costototal">
+            <h2 id="costototal">3104321.62 </h2>
           </div>
           <div class="form-group">
-            <input type="radio" name="alternativa" value="a1" checked> Alternativa 1<br>
-            <input type="radio" name="alternativa" value="a2"> Alternativa 2<br>
-            <input type="radio" name="alternativa" value="p"> Personalizado <br>
+            <input type="radio" name="alternativa" value="a1" checked onclick="alternativa1()"> Alternativa 1<br>
+            <input type="radio" name="alternativa" value="a2" onclick="alternativa2()"> Alternativa 2<br>
+            <input type="radio" name="alternativa" value="p" onclick="alternativa3()"> Personalizado <br>
           </div>
           <button class="btn btn-default" onclick="generar();">Aplicar</button>
       </div>

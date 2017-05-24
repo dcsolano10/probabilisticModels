@@ -53,10 +53,10 @@ var g4 = document.getElementById("g4").getContext('2d');
 var myG4 = new Chart(g4, {
   type: 'bar',
   data: {
-    labels: ["Ganancia", "C. exhibición", "C. envío", "C. traslado"],
+    labels: ["C. Exhibido", "C. Fábrica", "C. Envío", "C. Ganancia"],
     datasets: [{
       label: 'Valor total en pesos',
-      data: [4056390.09, 779046.51, 167575.94, 5445.99],
+      data: [779046.51,167575.94, 5445.99,4056390.09],
       backgroundColor: "rgb(192,192,192)"
     }]
   }
@@ -92,20 +92,75 @@ var myG6 = new Chart(g6, {
   }
 });
 
-function generar()
-{
+function generar() {
   swal({
-  title: "Generar modelo",
-  text: "Oprina OK para generar",
-  type: "info",
-  showCancelButton: true,
-  closeOnConfirm: false,
-  showLoaderOnConfirm: true,
-},
-function(){
-  setTimeout(function(){
-    swal("Modelo generado!");
-  }, 2000);
-});
+      title: "Generar modelo",
+      text: "Oprina OK para generar",
+      type: "info",
+      showCancelButton: true,
+      closeOnConfirm: false,
+      showLoaderOnConfirm: true,
+    },
+    function() {
+      llamarServicio();
+    });
 
+}
+
+function llamarServicio() {
+
+  exhibido = document.getElementById('exhibido').value
+  fabrica = document.getElementById('fabrica').value
+  envio = document.getElementById('envio').value
+  ganancia = document.getElementById('ganancia').value
+
+  dataArray = [exhibido,fabrica,envio,ganancia];
+  jQuery.ajax({
+    type: "POST",
+    url: "http://localhost:8080/costo",
+    data: JSON.stringify(dataArray),
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data, status, jqXHR) {
+      actualizarValores(data);
+      swal("Modelo generado!");
+    },
+
+    error: function(jqXHR, status) {
+      // error handler
+    }
+
+  });
+}
+
+alternativa1();
+
+function actualizarValores(data)
+{
+  console.log(data)
+  document.getElementById('costototal').innerHTML = data.costoTotal;
+  myG4.data.datasets[0].data = data.costosTotales;
+  myG4.update();
+}
+
+function alternativa1() {
+  document.getElementById('exhibido').value = '65000';
+  document.getElementById('fabrica').value = '11257';
+  document.getElementById('envio').value = '10000';
+  document.getElementById('ganancia').value = '150000';
+
+}
+
+function alternativa2() {
+  document.getElementById('exhibido').value = '22000';
+  document.getElementById('fabrica').value = '11257';
+  document.getElementById('envio').value = '10000';
+  document.getElementById('ganancia').value = '150000';
+}
+
+function alternativa3() {
+  document.getElementById('exhibido').value = '';
+  document.getElementById('fabrica').value = '';
+  document.getElementById('envio').value = '';
+  document.getElementById('ganancia').value = '';
 }
