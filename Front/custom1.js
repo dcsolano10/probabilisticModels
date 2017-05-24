@@ -91,3 +91,21 @@ var myG6 = new Chart(g6, {
     }]
   }
 });
+
+function generar()
+{
+  swal({
+  title: "Generar modelo",
+  text: "Oprina OK para generar",
+  type: "info",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  showLoaderOnConfirm: true,
+},
+function(){
+  setTimeout(function(){
+    swal("Modelo generado!");
+  }, 2000);
+});
+
+}

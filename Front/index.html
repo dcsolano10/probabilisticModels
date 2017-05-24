@@ -17,6 +17,7 @@
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="navbar-fixed-top.css" rel="stylesheet">
@@ -72,7 +73,6 @@
     <div class="row">
       <div class="col-sm-8">
         <h3> Costos unitarios</h3>
-        <form>
         <table class="table table-striped">
           <tr>
             <th>Costo exhibido</th>
@@ -92,11 +92,9 @@
           </tr>
         </table>
       </div>
-    </form>
 
       <div class="col-sm-4">
         <h3>Costo total: </h3>
-        <form>
           <div class="form-group">
             <label for="costototal">Ganancias totales actuales:</label>
             <input type="number" class="form-control" placeholder="3104321.62" id="costototal">
@@ -106,13 +104,12 @@
             <input type="radio" name="alternativa" value="a2"> Alternativa 2<br>
             <input type="radio" name="alternativa" value="p"> Personalizado <br>
           </div>
-          <button type="submit" class="btn btn-default">Aplicar</button>
-        </form>
+          <button class="btn btn-default" onclick="generar();">Aplicar</button>
       </div>
 
 
     </div>
-
+    <hr>
     <div class="row">
       <div class="col-sm-6">
       <center><b>Tasa de envío de acolchadas desde la fábrica por quincena<br /> </b></center>
@@ -161,6 +158,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
   <script src="../../dist/js/bootstrap.min.js"></script>
   <script src="custom1.js"></script>
+  <script src="bower_components/sweetalert/dist/sweetalert-dev.js"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
